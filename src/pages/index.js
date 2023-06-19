@@ -5,10 +5,9 @@ import Head from "next/head"
 const Home=()=> {
   <Head>
 
-  <title>WebBuilder</title>
-  
-  <meta name="description" content="Welcome to webbuilder"/>
-
+  <title>WebBuilder.com - Professional Website Creation Services</title>
+  <meta name="description" content="WebBuilder.com offers professional website creation services for individuals and businesses. Get a visually stunning and user-friendly website that helps you establish a strong online presence. Contact us for custom web design and development solutions."></meta>
+  <meta name="keywords" content="web builder, website creation, professional web design, web development, online presence, custom websites"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="/favicon.ico" />
  
