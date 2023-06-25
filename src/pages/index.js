@@ -2,7 +2,7 @@ import React, { useEffect ,useState} from "react"
 import Head from "next/head"
 import Slider from "react-slick"
 import { FiSliders } from "react-icons/fi"
-import FAQ from "../pages/components/FAQ"
+//import FAQ from "../pages/components/FAQ"
 
 import Image from "next/image"
 import {MdOutlineDesignServices,MdMobileFriendly,MdOutlineEditNote} from "react-icons/md"
@@ -23,37 +23,37 @@ const Home = () => {
     cssEase: "linear",
     //pauseOnHover: true
   };
-  const [faqs, setFaqs] = useState([
-    {
-      question: "Can you help with website hosting and domain registration?",
-      answer:
-        "Absolutely! We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.",
-      open: true
-    },
-    {
-      question: "Can I update my website content myself after it's launched?",
-      answer: " Yes, definitely! We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. you will be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.",
-      open: false
-    },
-    {
-      question:
-        "Do you offer e-commerce website development?",
-      answer: "Absolutely! We specialize in e-commerce website development. Whether you are starting an online store from scratch or looking to revamp your existing e-commerce website, we have the expertise to create a secure, user-friendly, and visually appealing online shopping experience. From product listings and shopping carts to secure payment gateways and inventory management, we can customize an e-commerce solution that meets your specific business needs.",
-      open: false
-    }
-  ]);
+  // const [faqs, setFaqs] = useState([
+  //   {
+  //     question: "Can you help with website hosting and domain registration?",
+  //     answer:
+  //       "Absolutely! We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.",
+  //     open: true
+  //   },
+  //   {
+  //     question: "Can I update my website content myself after it's launched?",
+  //     answer: " Yes, definitely! We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. you will be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.",
+  //     open: false
+  //   },
+  //   {
+  //     question:
+  //       "Do you offer e-commerce website development?",
+  //     answer: "Absolutely! We specialize in e-commerce website development. Whether you are starting an online store from scratch or looking to revamp your existing e-commerce website, we have the expertise to create a secure, user-friendly, and visually appealing online shopping experience. From product listings and shopping carts to secure payment gateways and inventory management, we can customize an e-commerce solution that meets your specific business needs.",
+  //     open: false
+  //   }
+  // ]);
 
-  const toggleFAQ = async (index) => {
-    await setFaqs(
-      faqs.map((faq, i) => {
-        if (i === index) {
-          faq.open = !faq.open;
-        } else {
-          faq.open = false;
-        }
+  // const toggleFAQ =  (index) => {
+  //   setFaqs(
+  //     faqs.map((faq, i) => {
+  //       if (i === index) {
+  //         faq.open = !faq.open;
+  //       } else {
+  //         faq.open = false;
+  //       }
 
-        return   faq;
-  }))}
+  //       return   faq;
+  // }))}
 const [model, setmodel] = useState(true)
 
   
@@ -247,9 +247,9 @@ const [model, setmodel] = useState(true)
 
         </div>
          <div className="faqs  p-2 sm:p-4">
-        {faqs.map((faq, index) => (
+        {/* {faqs.map((faq, index) => (
           <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-        ))}
+        ))} */}
       </div>
       </div>
     </section>
