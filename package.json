@@ -9,8 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@szhsin/react-accordion": "^1.2.1",
-    "jquery": "^3.7.0",
+    "bootstrap": "^5.3.0",
     "net": "^1.0.2",
     "next": "13.4.6",
     "react": "^18.2.0",
@@ -21,10 +20,8 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2"
+    "postcss": "^8.4.24"
   }
 }

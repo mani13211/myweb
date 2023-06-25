@@ -1,14 +1,13 @@
-import React, { useEffect ,useState} from "react"
+import React, { useEffect, useState } from "react"
 import Head from "next/head"
+import Script from "next/script"
 import Slider from "react-slick"
 import { FiSliders } from "react-icons/fi"
-//import FAQ from "../pages/components/FAQ"
 
 import Image from "next/image"
-import {MdOutlineDesignServices,MdMobileFriendly,MdOutlineEditNote} from "react-icons/md"
-import { Accordion, AccordionItem } from '@szhsin/react-accordion';
+import { MdOutlineDesignServices, MdMobileFriendly, MdOutlineEditNote } from "react-icons/md"
 const Home = () => {
- 
+
   var settings = {
     dots: true,
     infinite: true,
@@ -17,84 +16,56 @@ const Home = () => {
     nextArrow: false,
     slidesToScroll: 1,
     autoplay: true,
-    arrows : false,
+    arrows: false,
     speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
     //pauseOnHover: true
   };
-  // const [faqs, setFaqs] = useState([
-  //   {
-  //     question: "Can you help with website hosting and domain registration?",
-  //     answer:
-  //       "Absolutely! We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.",
-  //     open: true
-  //   },
-  //   {
-  //     question: "Can I update my website content myself after it's launched?",
-  //     answer: " Yes, definitely! We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. you will be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.",
-  //     open: false
-  //   },
-  //   {
-  //     question:
-  //       "Do you offer e-commerce website development?",
-  //     answer: "Absolutely! We specialize in e-commerce website development. Whether you are starting an online store from scratch or looking to revamp your existing e-commerce website, we have the expertise to create a secure, user-friendly, and visually appealing online shopping experience. From product listings and shopping carts to secure payment gateways and inventory management, we can customize an e-commerce solution that meets your specific business needs.",
-  //     open: false
-  //   }
-  // ]);
 
-  // const toggleFAQ =  (index) => {
-  //   setFaqs(
-  //     faqs.map((faq, i) => {
-  //       if (i === index) {
-  //         faq.open = !faq.open;
-  //       } else {
-  //         faq.open = false;
-  //       }
+ const [model, setmodel] = useState(true)
 
-  //       return   faq;
-  // }))}
-const [model, setmodel] = useState(true)
 
-  
   return (<>
 
 
-<Head>
-    <title>FusionWebz - Professional Website Creation Services</title>
+    <Head>
+      <title>FusionWebz - Professional Website Creation Services</title>
 
-    <meta name="description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
-    <meta name="keywords" content="website creation,fusionwebz, professional web design, web development, online presence, custom websites" />
-    <meta property="og:title" content="FusionWebz - Professional Website Creation Services" />
-    <meta property="og:description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
-    {/* include company images */}
-    <meta property="og:image" content="https://fusionwebz.com/banner1.png" />
-    <meta property="og:url" content="https://fusionwebz.com" />
+      <meta name="description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
+      <meta name="keywords" content="website creation,fusionwebz, professional web design, web development, online presence, custom websites" />
+      <meta property="og:title" content="FusionWebz - Professional Website Creation Services" />
+      <meta property="og:description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
+      {/* include company images */}
+      <meta property="og:image" content="https://fusionwebz.com/banner1.png" />
+      <meta property="og:url" content="https://fusionwebz.com" />
+     
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+    </Head>
+    <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></Script>
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></Script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      charset="UTF-8"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-    />
-  </Head>
+    {model && (
+      <div className="model">
+        <div className="model-body">
+          <p> this website is under construction</p>
+          <button className="btn btn-primary  " onClick={(() => setmodel((false)))}> Get it</button>
+        </div>
 
-{model && (
-  <div className="model">
-  <div className="model-body">
-    <p> this website is under construction</p>
-        <button className="inline-flex text-white bg-orange-500 border-0 py-1 px-6 focus:outline-none hover:bg-orange-600 rounded " onClick={(()=>setmodel((false)))}> Get it</button>
-  </div>
+      </div>
+    )}
 
-</div>
-)}
-  
     <section className="text-gray-600 body-font slider">
       <div>
         <Slider  {...settings}>
@@ -151,7 +122,7 @@ const [model, setmodel] = useState(true)
 
 
     </section>
-    <section className="px-0 py-2 sm: px-5 py-5">
+    {/* <section className="px-0 py-2 sm: px-5 py-5">
       <div className="m-auto p-4 md:container md:p-6">
         <div className="container mb-5">
           <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">website for everyone</h2>
@@ -167,7 +138,7 @@ const [model, setmodel] = useState(true)
               <div className="w-max m-auto ">
                 <div className="w-14 sm:w-20 sm:h-20 h-14 inline-flex items-center justify-center rounded-full bg-orange-500 text-orange-100 mb-5 flex-shrink-0">
                   <MdOutlineDesignServices className="text-xl sm:text-3xl" />
-                  
+
                 </div>
               </div>
 
@@ -246,26 +217,61 @@ const [model, setmodel] = useState(true)
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Frequently asked questions</h1>
 
         </div>
-         <div className="faqs  p-2 sm:p-4">
-        {/* {faqs.map((faq, index) => (
-          <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-        ))} */}
-      </div>
+        <div className="faqs  p-2 sm:p-4">
+          <div className="accordion" id="accordionExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section className=" p-8 bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
 
-      <div className="container text-center text-white px-5 py-2">
+      <div className=" text-center text-white px-5 py-2">
         <h2 className="text-xl mb-3">
-        Get in Touch
+          Get in Touch
         </h2>
         <p className="mb-3">Feel free to ask us about our portfolio and previous client projects. We are proud of the work we have done and would be happy to share it with you.</p>
         <button className="  flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-5 focus:outline-none hover:bg-orange-600 rounded">Contact Us</button>
       </div>
-    </section>
+    </section> */}
 
 
- 
+
 
 
   </>

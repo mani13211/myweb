@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 *{
   box-sizing: border-box;
@@ -8,6 +6,13 @@
 body {
 overflow-x:hidden ;
 }
+a {
+  color: unset ;
+  text-decoration: none ;
+  cursor: pointer;
+
+}
+
 
 .banner{
   scale: 1.05;
@@ -21,12 +26,7 @@ overflow-x:hidden ;
 
   color: white !important
 }
-.faqs {
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
- 
-}
+
 
 .model{
     position: fixed;
@@ -55,44 +55,24 @@ overflow-x:hidden ;
   text-transform: capitalize;
   align-items: baseline;
 }
-/* 
-.faqs .faq {
-  border-radius: 10px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-} */
 
-.faqs .faq .faq-question {
-  position: relative;
-  transition: all 0.4s ease;
+
+.logo-finalize img {
+  width: 60px;
 }
-
-.faqs .faq .faq-question::after {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  transition: all 0.2s ease;
+.logo-finalize .span{
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 0rem;
 }
-
-.faqs .faq .faq-answer {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.2s ease;
+.logo-finalize .btm{
+  font-size: 14px;
+  margin-bottom: 0rem;
 }
-
-.faqs .faq.open .faq-question {
-  margin-bottom: 15px;
+ul {
+  list-style-type: none;
+  padding-left: 0px;
 }
-
-.faqs .faq.open .faq-question::after {
-  content: "-";
-}
-
-.faqs .faq.open .faq-answer {
-  max-height: 1000px;
-  opacity: 1;
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #ff6700 !important;
 }
