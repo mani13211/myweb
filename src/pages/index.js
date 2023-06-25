@@ -2,12 +2,65 @@ import React, { useEffect ,useState} from "react"
 import Head from "next/head"
 import Slider from "react-slick"
 import { FiSliders } from "react-icons/fi"
-import FAQ from "./components/FAQ"
+import FAQ from "../pages/components/FAQ"
+
 import Image from "next/image"
 import {MdOutlineDesignServices,MdMobileFriendly,MdOutlineEditNote} from "react-icons/md"
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 const Home = () => {
-  <Head>
+ 
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    prevArrow: false,
+    nextArrow: false,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows : false,
+    speed: 500,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    //pauseOnHover: true
+  };
+  const [faqs, setFaqs] = useState([
+    {
+      question: "Can you help with website hosting and domain registration?",
+      answer:
+        "Absolutely! We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.",
+      open: true
+    },
+    {
+      question: "Can I update my website content myself after it's launched?",
+      answer: " Yes, definitely! We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. you will be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.",
+      open: false
+    },
+    {
+      question:
+        "Do you offer e-commerce website development?",
+      answer: "Absolutely! We specialize in e-commerce website development. Whether you are starting an online store from scratch or looking to revamp your existing e-commerce website, we have the expertise to create a secure, user-friendly, and visually appealing online shopping experience. From product listings and shopping carts to secure payment gateways and inventory management, we can customize an e-commerce solution that meets your specific business needs.",
+      open: false
+    }
+  ]);
+
+  const toggleFAQ = async (index) => {
+    await setFaqs(
+      faqs.map((faq, i) => {
+        if (i === index) {
+          faq.open = !faq.open;
+        } else {
+          faq.open = false;
+        }
+
+        return   faq;
+  }))}
+const [model, setmodel] = useState(true)
+
+  
+  return (<>
+
+
+<Head>
     <title>FusionWebz - Professional Website Creation Services</title>
 
     <meta name="description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
@@ -32,55 +85,6 @@ const Home = () => {
     />
   </Head>
 
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    prevArrow: false,
-    nextArrow: false,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrows : false,
-    speed: 500,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    //pauseOnHover: true
-  };
-  const [faqs, setFaqs] = useState([
-    {
-      question: "Can you help with website hosting and domain registration?",
-      answer:
-        "Absolutely! We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.",
-      open: true
-    },
-    {
-      question: "Can I update my website content myself after it's launched?",
-      answer: " Yes, definitely! We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. You'll be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.",
-      open: false
-    },
-    {
-      question:
-        "Do you offer e-commerce website development?",
-      answer: "Absolutely! We specialize in e-commerce website development. Whether you're starting an online store from scratch or looking to revamp your existing e-commerce website, we have the expertise to create a secure, user-friendly, and visually appealing online shopping experience. From product listings and shopping carts to secure payment gateways and inventory management, we can customize an e-commerce solution that meets your specific business needs.",
-      open: false
-    }
-  ]);
-
-  const toggleFAQ = index => {
-    setFaqs(
-      faqs.map((faq, i) => {
-        if (i === index) {
-          faq.open = !faq.open;
-        } else {
-          faq.open = false;
-        }
-
-        return faq;
-  }))}
-const [model, setmodel] = useState(true)
-
-  
-  return (<>
 {model && (
   <div className="model">
   <div className="model-body">
@@ -100,7 +104,7 @@ const [model, setmodel] = useState(true)
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Welcome to FusionWebs
                   {/* <br className="hidden lg:inline-block" />readymade gluten */}
                 </h1>
-                <p className="mb-8 max-w-md leading-relaxed text-gray-300">At FusionWebs, we believe that every business deserves a stunning online presence. We specialize in creating beautiful, functional websites that help our clients succeed in the digital world. Whether you're a small startup or a large enterprise, we've got you covered.</p>
+                <p className="mb-8 max-w-md leading-relaxed text-gray-300">At FusionWebs, we believe that every business deserves a stunning online presence. We specialize in creating beautiful, functional websites that help our clients succeed in the digital world. Whether you are a small startup or a large enterprise, we have got you covered.</p>
                 <div className="flex justify-center">
                   <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Get Started</button>
                   {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
@@ -134,7 +138,7 @@ const [model, setmodel] = useState(true)
               <img className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="" />
               <div className="text-center lg:w-2/3 w-full">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Affordable Web Solutions</h1>
-                <p className="mb-8 text-gray-400 leading-relaxed">We believe that high-quality web design shouldn't break the bank. Our affordable web solutions ensure that you get the best value for your investment. Whether you need a simple brochure website or a complex e-commerce platform, we offer competitive pricing without compromising on quality.</p>
+                <p className="mb-8 text-gray-400 leading-relaxed">We believe that high-quality web design should not break the bank. Our affordable web solutions ensure that you get the best value for your investment. Whether you need a simple brochure website or a complex e-commerce platform, we offer competitive pricing without compromising on quality.</p>
                 <div className="flex justify-center">
                   <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Request a Quote</button>
                   {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
@@ -151,7 +155,7 @@ const [model, setmodel] = useState(true)
       <div className="m-auto p-4 md:container md:p-6">
         <div className="container mb-5">
           <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">website for everyone</h2>
-          <p className="text-gray-500 mb-5  text-sm  md:w-4/5 m-auto text-center capitalize">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients' unique needs but also exceed their expectations.</p>
+          <p className="text-gray-500 mb-5  text-sm  md:w-4/5 m-auto text-center capitalize">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients  unique needs but also exceed their expectations.</p>
         </div>
 
 
@@ -197,7 +201,7 @@ const [model, setmodel] = useState(true)
 
               <h3 className="tracking-widest text-orange-500 text-xs font-medium title-font">Tailored to Your Needs</h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4"> Unique Designs for Your Brand</h2>
-              <p className="leading-relaxed text-base"> We believe in creating websites that reflect your brand's personality and stand out from the competition. Our team works closely with you to understand your goals and preferences, crafting custom designs that align with your visio</p>
+              <p className="leading-relaxed text-base"> We believe in creating websites that reflect your brands personality and stand out from the competition. Our team works closely with you to understand your goals and preferences, crafting custom designs that align with your visio</p>
               <button className="flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-5  focus:outline-none hover:bg-orange-600 rounded">Button</button>
             </div>
           </div>
@@ -223,7 +227,7 @@ const [model, setmodel] = useState(true)
             <h2 className="text-sm title-font text-gray-400 tracking-widest">Welcome to FusionWebs – </h2>
             <h1 className="text-gray-100 text-3xl title-font font-medium mb-4"> Your Gateway to a Dynamic Online Presence!</h1>
 
-            <p className="leading-relaxed text-gray-300 mb-4">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients' unique needs but also exceed their expectations.</p>
+            <p className="leading-relaxed text-gray-300 mb-4">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients unique needs but also exceed their expectations.</p>
 
             <div className="flex">
               <button className="flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Button</button>
@@ -255,7 +259,7 @@ const [model, setmodel] = useState(true)
         <h2 className="text-xl mb-3">
         Get in Touch
         </h2>
-        <p className="mb-3">Feel free to ask us about our portfolio and previous client projects. We're proud of the work we've done and would be happy to share it with you.</p>
+        <p className="mb-3">Feel free to ask us about our portfolio and previous client projects. We are proud of the work we have done and would be happy to share it with you.</p>
         <button className="  flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-5 focus:outline-none hover:bg-orange-600 rounded">Contact Us</button>
       </div>
     </section>
