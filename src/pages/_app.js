@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import '@/styles/globals.css'
+import "../styles/css/index.css"
 //import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
 
 

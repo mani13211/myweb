@@ -3,7 +3,6 @@ import Head from "next/head"
 import Script from "next/script"
 import Slider from "react-slick"
 import { FiSliders } from "react-icons/fi"
-
 import Image from "next/image"
 import { MdOutlineDesignServices, MdMobileFriendly, MdOutlineEditNote } from "react-icons/md"
 const Home = () => {
@@ -23,7 +22,7 @@ const Home = () => {
     //pauseOnHover: true
   };
 
- const [model, setmodel] = useState(true)
+  //  const [model, setmodel] = useState(true)
 
 
   return (<>
@@ -39,7 +38,7 @@ const Home = () => {
       {/* include company images */}
       <meta property="og:image" content="https://fusionwebz.com/banner1.png" />
       <meta property="og:url" content="https://fusionwebz.com" />
-     
+
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
         rel="stylesheet"
@@ -54,9 +53,9 @@ const Home = () => {
       />
     </Head>
     <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></Script>
-      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></Script>
+    <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></Script>
 
-    {model && (
+    {/* {model && (
       <div className="model">
         <div className="model-body">
           <p> this website is under construction</p>
@@ -64,7 +63,7 @@ const Home = () => {
         </div>
 
       </div>
-    )}
+    )} */}
 
     <section className="text-gray-600 body-font slider">
       <div>
@@ -121,6 +120,62 @@ const Home = () => {
       </div>
 
 
+    </section>
+    <section className="accordians">
+    <div className="flex flex-wrap w-full  mb-4  text-center">
+          <div className="text-center subtitle-faq "><div className="div div1"></div>Faq<div className="div div2"></div></div>
+          <h3 className="">Frequently asked questions</h3>
+
+        </div>
+      <div className="accordion accordian-container container" id="accordionExample">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Can you help with website hosting and domain registration?
+            </button>
+          </h2>
+          <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div className="accordion-body">
+              <strong>Absolutely!</strong>   We offer website hosting services and can assist you with domain registration as well. Our hosting packages are reliable, secure, and tailored to meet your specific needs. We can help you choose the right domain name and handle all the technical aspects to ensure your website is up and running smoothly.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Do you provide website maintenance services?
+            </button>
+          </h2>
+          <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div className="accordion-body">
+              <strong>Yes,</strong>  we offer comprehensive website maintenance services to keep your website running smoothly. Our maintenance packages include routine updates, security patches, regular backups, and technical support. We understand that websites require continuous attention to ensure optimal performance and security. With our ongoing maintenance services, you can focus on your core business while we take care of keeping your website up-to-date and secure.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Can I update my website content myself after it's launched?
+            </button>
+          </h2>
+          <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div className="accordion-body">
+              <strong>Yes, definitely!</strong>  We provide user-friendly content management systems (CMS) that allow you to update and manage your website content with ease. We will provide training and support to familiarize you with the CMS and its functionalities. You'll be able to add new pages, edit existing content, upload images, and more. We believe in empowering our clients to have control over their website content so that they can keep their website fresh and up to date.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section className="getintouchseaction p-3">
+
+      <div className=" text-center text-white px-5 py-2">
+        <h4 className="mb-3">
+          Get in Touch
+        </h4>
+        <p className="mb-3">Feel free to ask us about our portfolio and previous client projects. We are proud of the work we have done and would be happy to share it with you.</p>
+        <button className="  btn btn-primary">Contact Us</button>
+      </div>
     </section>
     {/* <section className="px-0 py-2 sm: px-5 py-5">
       <div className="m-auto p-4 md:container md:p-6">
