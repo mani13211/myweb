@@ -22,7 +22,7 @@ const Home = () => {
     //pauseOnHover: true
   };
 
-  //  const [model, setmodel] = useState(true)
+  const [model, setmodel] = useState(true)
 
 
   return (<>
@@ -55,7 +55,7 @@ const Home = () => {
     <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></Script>
     <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></Script>
 
-    {/* {model && (
+    {model && (
       <div className="model">
         <div className="model-body">
           <p> this website is under construction</p>
@@ -63,7 +63,7 @@ const Home = () => {
         </div>
 
       </div>
-    )} */}
+    )}
 
     <section className="text-gray-600 body-font slider">
       <div>
