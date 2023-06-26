@@ -14,7 +14,7 @@ const Home = () => {
     prevArrow: false,
     nextArrow: false,
     slidesToScroll: 1,
-     autoplay: true,
+    autoplay: true,
     arrows: false,
     speed: 500,
     autoplaySpeed: 2000,
@@ -119,18 +119,69 @@ const Home = () => {
 
 
     </section>
-    <section className="">
-    <div className="container mb-5 p-5">
-          <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">Website for everyone</h2>
-          <p className="text-gray-500 mb-5  text-sm  md:w-4/5 m-auto text-center capitalize">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients  unique needs but also exceed their expectations.</p>
-        </div>
+    <section className="p-5">
+      <div className="container">
+        <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">Website for everyone</h2>
+        <p className="text-gray-500 mb-5  text-sm  md:w-4/5 m-auto text-center capitalize">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients  unique needs but also exceed their expectations.</p>
+      </div>
+      <div className="cards-container mb-3" >
+      
+         <div className="card " >
+              <div className="img-container">
+                <img src="cardimges/professionaldesign.svg" alt="" />
+              </div>
+
+              <div className="card-body">
+                <h5 className="card-title"> Engaging and User-Friendly Websites</h5>
+                <p className="card-text"> Our expert designers create visually stunning and intuitive websites that leave a lasting impression on your visitors. We focus on seamless user experiences, compelling visuals, and effective call-to-actions to drive conversions.</p>
+              </div>
+            </div>
+            <div className="card " >
+              <div className="img-container">
+                <img src="cardimges/responsive.svg" alt="" />
+              </div>
+
+              <div className="card-body">
+                <h5 className="card-title">  Responsive & Mobile-Friendly</h5>
+                <p className="card-text"> We believe in creating websites that reflect your brands personality and stand out from the competition. Our team works closely with you to understand your goals and preferences, crafting custom designs that align with your vision.</p>
+              </div>
+            </div>
+            <div className="card " >
+              <div className="img-container">
+                <img src="cardimges/needa.svg" alt="" />
+              </div>
+
+              <div className="card-body">
+                <h5 className="card-title"> Unique Designs for Your Brand</h5>
+                <p className="card-text"> We believe in creating websites that reflect your brands personality and stand out from the competition. Our team works closely with you to understand your goals and preferences, crafting custom designs that align with your vision.</p>
+              </div>
+            </div>
+            <div className="card " >
+              <div className="img-container">
+                <img src="cardimges/support.svg" alt="" />
+              </div>
+
+              <div className="card-body">
+                <h5 className="card-title"> UAssistance When You Need It</h5>
+                <p className="card-text"> Our friendly and knowledgeable support team is here to assist you at every step of your website journey. From technical issues to content updates, we provide prompt and reliable support, ensuring your website runs smoothly.</p>
+              </div>
+            </div>
+
+
+            
+
+
+
+
+      </div>
+
 
     </section>
     <section className="aboutsection">
-      <div className="row contianer">
+      <div className="row contianer " style={{"alignItems":"center"}}>
         <div className="col-md-6 p-3">
 
-          <img src="/codeman1.jpg" className="img-fluid mb-3" alt="Picture1" />
+          <img src="cardimges/browsing.svg" className="img-fluid " alt="Picture1" />
         </div>
         <div className="col-md-6 ">
           <span> Welcome to FusionWebs – </span>

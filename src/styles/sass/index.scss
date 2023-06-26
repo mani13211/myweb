@@ -85,6 +85,30 @@ section{
             color:#ff7416
         }
     }
+    .cards-container{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+       
+        .card{
+            margin: 1rem;
+            width: 280px;
+            .img-container{
+                width: calc( 100% - 20%);
+                margin: auto;
+                display: flex;
+                height: 150px;
+                img{
+                    width: -webkit-fill-available;
+                }
+            }
+            
+            padding:1rem;
+
+        }
+        
+    }
+    
 }
 
 
@@ -97,3 +121,24 @@ section{
     }
     
  }
+
+ @media (max-width: 1399.98px) { 
+    .cards-container{
+        .card{
+            margin: .5rem !important;
+           
+            .img-container{
+                height: 100px  !important;
+                
+            }
+            h5.card-title {
+                font-size: 16px;
+            }
+            p.card-text {
+                font-size: 14px;
+            }
+        }
+        
+    }
+
+  }

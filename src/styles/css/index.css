@@ -76,6 +76,25 @@ section.aboutsection p {
 section.aboutsection span {
   color: #ff7416;
 }
+section .cards-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+section .cards-container .card {
+  margin: 1rem;
+  width: 280px;
+  padding: 1rem;
+}
+section .cards-container .card .img-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  height: 150px;
+}
+section .cards-container .card .img-container img {
+  width: -webkit-fill-available;
+}
 
 @media (max-width: 575.98px) {
   section.accordians {
@@ -83,5 +102,19 @@ section.aboutsection span {
   }
   .aboutsection {
     padding: 1rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .cards-container .card {
+    margin: 0.5rem !important;
+  }
+  .cards-container .card .img-container {
+    height: 100px !important;
+  }
+  .cards-container .card h5.card-title {
+    font-size: 16px;
+  }
+  .cards-container .card p.card-text {
+    font-size: 14px;
   }
 }
