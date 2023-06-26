@@ -23,6 +23,25 @@
 section{
     &.slider{
         @include bg-img;
+        
+        color: white;
+        .container{
+            
+            .row{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                h1{
+                    font-size: 70px;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: 17px;
+                    margin-bottom: 3rem;
+                }
+            }
+
+        }
     }
     &.accordians{
         .subtitle-faq {

@@ -14,7 +14,7 @@ const Home = () => {
     prevArrow: false,
     nextArrow: false,
     slidesToScroll: 1,
-    autoplay: true,
+     autoplay: true,
     arrows: false,
     speed: 500,
     autoplaySpeed: 2000,
@@ -66,55 +66,52 @@ const Home = () => {
       </div>
     )}
 
-    <section className="text-gray-600 body-font slider p-3">
-      <div>
+    <section className="text-gray-600 body-font slider ">
+      <div className="container">
         <Slider  {...settings}>
-          <div className="parent h-[80vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-              <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Welcome to FusionWebs
-                  {/* <br className="hidden lg:inline-block" />readymade gluten */}
-                </h1>
-                <p className="mb-8 max-w-md leading-relaxed text-gray-300">At FusionWebs, we believe that every business deserves a stunning online presence. We specialize in creating beautiful, functional websites that help our clients succeed in the digital world. Whether you are a small startup or a large enterprise, we have got you covered.</p>
-                <div className="flex justify-center">
-                  <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Get Started</button>
-                  {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
-                </div>
-              </div>
-              <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
-              </div>
-            </div>
-          </div>
-          <div className="parent h-[80vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-              <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
-              </div>
-              <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Professional Website Design
-                  {/* <br className="hidden lg:inline-block" />readymade gluten */}
-                </h1>
-                <p className="mb-8 text-gray-400 leading-relaxed">Stand out from the crowd with a professionally designed website that reflects your brand identity. Our team of expert designers will work closely with you to create a visually appealing and user-friendly website that engages your visitors and drives conversions. Let us bring your vision to life.</p>
-                <div className="flex justify-center">
-                  <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Explore Our Portfolio</button>
-                  {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="container p-0">
+            <div className="row">
+              <div className="col-md-6">
+                <div className="wrapper">
+                  <h1 className="">Welcome to FusionWebs</h1>
+                  <p className="mb-8 max-w-md leading-relaxed text-gray-300">At FusionWebs, we believe that every business deserves a stunning online presence. We specialize in creating beautiful, functional websites that help our clients succeed in the digital world. Whether you are a small startup or a large enterprise, we have got you covered.</p>
 
-          <div className="parent h-[80vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
-            <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-              <img className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="" />
-              <div className="text-center lg:w-2/3 w-full">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Affordable Web Solutions</h1>
-                <p className="mb-8 text-gray-400 leading-relaxed">We believe that high-quality web design should not break the bank. Our affordable web solutions ensure that you get the best value for your investment. Whether you need a simple brochure website or a complex e-commerce platform, we offer competitive pricing without compromising on quality.</p>
-                <div className="flex justify-center">
-                  <button className="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">Request a Quote</button>
-                  {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
+                  <button className="rounded-0 btn btn-primary btn-lg">Get Started</button>
+
                 </div>
+
               </div>
+              <div className="col-md-6"></div>
+            </div>
+          </div>
+          <div className="container p-0">
+            <div className="row">
+              <div className="col-md-6"></div>
+              <div className="col-md-6">
+                <div className="wrapper">
+                  <h1 className="">Professional Website Design</h1>
+                  <p className="">Stand out from the crowd with a professionally designed website that reflects your brand identity. Our team of expert designers will work closely with you to create a visually appealing and user-friendly website that engages your visitors and drives conversions. Let us bring your vision to life.</p>
+
+                  <button className="rounded-0 btn btn-primary btn-lg">Check Portfolio</button>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div className="container p-0">
+            <div className="row">
+              <div className="col-md-6"></div>
+              <div className="col-md-6">
+                <h1 className="">Affordable Web Solutions</h1>
+                <p className="">We believe that high-quality web design should not break the bank. Our affordable web solutions ensure that you get the best value for your investment. Whether you need a simple brochure website or a complex e-commerce platform, we offer competitive pricing without compromising on quality.</p>
+                <div className="flex justify-center">
+                  <button className="rounded-0 btn btn-primary btn-lg">Request a Quote</button>
+
+                </div>
+
+              </div>
+
             </div>
           </div>
         </Slider>
@@ -123,13 +120,13 @@ const Home = () => {
 
     </section>
     <section className="">
-  im linker
+      im linker
     </section>
     <section className="aboutsection">
       <div className="row contianer">
         <div className="col-md-6 p-3">
 
-        <img src="/codeman1.jpg"  className="img-fluid mb-3" alt="Picture1" />
+          <img src="/codeman1.jpg" className="img-fluid mb-3" alt="Picture1" />
         </div>
         <div className="col-md-6 ">
           <span> Welcome to FusionWebs – </span>
@@ -140,16 +137,16 @@ const Home = () => {
       </div>
     </section>
     <section className="accordians">
-    <div className="flex flex-wrap w-full  mb-4  text-center">
-          <div className="text-center subtitle-faq "><div className="div div1"></div>Faq<div className="div div2"></div></div>
-          <h3 className="">Frequently asked questions</h3>
+      <div className="flex flex-wrap w-full  mb-4  text-center">
+        <div className="text-center subtitle-faq "><div className="div div1"></div>Faq<div className="div div2"></div></div>
+        <h3 className="">Frequently asked questions</h3>
 
-        </div>
+      </div>
       <div className="accordion accordian-container container" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Can you help with website hosting and domain registration?
+              Can you help with website hosting and domain registration?
             </button>
           </h2>
           <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -161,7 +158,7 @@ const Home = () => {
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Do you provide website maintenance services?
+              Do you provide website maintenance services?
             </button>
           </h2>
           <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -173,7 +170,7 @@ const Home = () => {
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Can I update my website content myself after its launched?
+              Can I update my website content myself after its launched?
             </button>
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -195,7 +192,8 @@ const Home = () => {
         <button className="  btn btn-primary">Contact Us</button>
       </div>
     </section>
-    {/* <section className="px-0 py-2 sm: px-5 py-5">
+    {/*
+     <section className="px-0 py-2 sm: px-5 py-5">
       <div className="m-auto p-4 md:container md:p-6">
         <div className="container mb-5">
           <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">website for everyone</h2>
@@ -255,93 +253,10 @@ const Home = () => {
 
       </div>
     </section>
-
-    <section className="text-gray-600 body-font overflow-hidden bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
-      <div className="container px-5  py-12 sm:py-24 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap">
-
-          <Image src="/codeman1.jpg" width={400} height={500} alt="Picture1" />
+    */}
 
 
 
-
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-
-
-            <h2 className="text-sm title-font text-gray-400 tracking-widest">Welcome to FusionWebs – </h2>
-            <h1 className="text-gray-100 text-3xl title-font font-medium mb-4"> Your Gateway to a Dynamic Online Presence!</h1>
-
-            <p className="leading-relaxed text-gray-300 mb-4">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients unique needs but also exceed their expectations.</p>
-
-            <div className="flex">
-              <button className="flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Button</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section className="text-gray-600 body-font">
-      <div className="container px-5  py-12 sm:py-24 mx-auto">
-        <div className="flex flex-wrap w-full  mb-4 sm:mb-12 flex-col items-center text-center">
-          <div className="lg:w-1/2 w-full leading-relaxed text-gray-500 flex items-center justify-center text-start "><div className="bg-gray-400 w-32 h-1 me-1"></div>Faq<div className="bg-gray-400 w-32 h-1 ms-1"></div></div>
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Frequently asked questions</h1>
-
-        </div>
-        <div className="faqs  p-2 sm:p-4">
-          <div className="accordion" id="accordionExample">
-            <div className="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header">
-                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className=" p-8 bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
-
-      <div className=" text-center text-white px-5 py-2">
-        <h2 className="text-xl mb-3">
-          Get in Touch
-        </h2>
-        <p className="mb-3">Feel free to ask us about our portfolio and previous client projects. We are proud of the work we have done and would be happy to share it with you.</p>
-        <button className="  flex mx-auto mt-6 text-white bg-orange-500 border-0 py-2 px-5 focus:outline-none hover:bg-orange-600 rounded">Contact Us</button>
-      </div>
-    </section> */}
 
 
 

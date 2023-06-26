@@ -19,6 +19,20 @@ section.slider {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png");
   background-repeat: unset;
   background-size: cover;
+  color: white;
+}
+section.slider .container .row {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+section.slider .container .row h1 {
+  font-size: 70px;
+  margin-bottom: 1rem;
+}
+section.slider .container .row p {
+  font-size: 17px;
+  margin-bottom: 3rem;
 }
 section.accordians {
   padding: 3rem;
