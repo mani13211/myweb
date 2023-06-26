@@ -19,7 +19,7 @@ const Home = () => {
     speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    //pauseOnHover: true
+    pauseOnHover: false
   };
 
   const [model, setmodel] = useState(true)
