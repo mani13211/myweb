@@ -30,6 +30,7 @@ const Home = () => {
 
     <Head>
       <title>FusionWebz - Professional Website Creation Services</title>
+      <meta name="google-site-verification" content="EFqwTpYdM_W33vPB1iL8IMcVPXuz42x6ZXNmro-MnjQ" />
 
       <meta name="description" content="FusionWebz offers professional website creation services for individuals and businesses. We design and develop visually stunning and user-friendly websites to help you establish a strong online presence. Contact us for custom web design solutions." />
       <meta name="keywords" content="website creation,fusionwebz, professional web design, web development, online presence, custom websites" />
