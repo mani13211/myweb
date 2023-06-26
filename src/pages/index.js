@@ -120,7 +120,11 @@ const Home = () => {
 
     </section>
     <section className="">
-      im linker
+    <div className="container mb-5 p-5">
+          <h2 className="text-center mb-3   text-2xl sm:text-3xl capitalize">Website for everyone</h2>
+          <p className="text-gray-500 mb-5  text-sm  md:w-4/5 m-auto text-center capitalize">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients  unique needs but also exceed their expectations.</p>
+        </div>
+
     </section>
     <section className="aboutsection">
       <div className="row contianer">
