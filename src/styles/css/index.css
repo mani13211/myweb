@@ -45,3 +45,29 @@ section.getintouchseaction {
   background-repeat: unset;
   background-size: cover;
 }
+section.aboutsection {
+  padding: 5rem;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png");
+  background-repeat: unset;
+  background-size: cover;
+  color: white;
+}
+section.aboutsection .row {
+  margin: auto;
+  max-width: 991.98px;
+}
+section.aboutsection p {
+  color: #dfdfdf;
+}
+section.aboutsection span {
+  color: #ff7416;
+}
+
+@media (max-width: 575.98px) {
+  section.accordians {
+    padding: 2rem 0rem;
+  }
+  .aboutsection {
+    padding: 1rem !important;
+  }
+}

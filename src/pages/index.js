@@ -66,7 +66,7 @@ const Home = () => {
       </div>
     )}
 
-    <section className="text-gray-600 body-font slider">
+    <section className="text-gray-600 body-font slider p-3">
       <div>
         <Slider  {...settings}>
           <div className="parent h-[80vh] bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Code_presentation_background.png')] bg-no-repeat bg-cover">
@@ -121,6 +121,23 @@ const Home = () => {
       </div>
 
 
+    </section>
+    <section className="">
+  im linker
+    </section>
+    <section className="aboutsection">
+      <div className="row contianer">
+        <div className="col-md-6 p-3">
+
+        <img src="/codeman1.jpg"  className="img-fluid mb-3" alt="Picture1" />
+        </div>
+        <div className="col-md-6 ">
+          <span> Welcome to FusionWebs – </span>
+          <h3 className="mb-3"> Your Gateway to a Dynamic Online Presence!</h3>
+          <p className="leading-relaxed text-gray-300 mb-3">Our mission is simple yet powerful: to make high-quality website solutions accessible to everyone. We believe that every business deserves a visually stunning, user-friendly, and results-driven website that sets them apart from the competition. We are committed to delivering exceptional web experiences that not only meet our clients unique needs but also exceed their expectations.</p>
+          <button className="btn btn-primary mb-3"> Lets start</button>
+        </div>
+      </div>
     </section>
     <section className="accordians">
     <div className="flex flex-wrap w-full  mb-4  text-center">

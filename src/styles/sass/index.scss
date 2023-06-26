@@ -51,4 +51,30 @@ section{
         @include bg-img;
       
     }
+    &.aboutsection{
+        padding: 5rem;
+        .row{
+            margin: auto;
+            max-width: 991.98px;
+        }
+        @include bg-img;
+        color: white;
+        p{
+            color: #dfdfdf;
+        }
+        span{
+            color:#ff7416
+        }
+    }
 }
+
+
+@media (max-width: 575.98px) { 
+    section.accordians {
+        padding: 2rem 0rem;
+    }
+    .aboutsection{
+        padding: 1rem  !important;
+    }
+    
+ }
