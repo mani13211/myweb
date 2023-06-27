@@ -62,7 +62,6 @@ const Home = () => {
           <p> this website is under construction</p>
           <button className="btn btn-primary  " onClick={(() => setmodel((false)))}> Get it</button>
         </div>
-
       </div>
     )}
 
