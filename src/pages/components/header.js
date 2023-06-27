@@ -36,7 +36,9 @@ function Header() {
                 <a className="nav-link ">About Us</a>
               </li>
             </ul>
-              <button className="btn btn-primary" onClick={(()=>{location.href='https://wa.me/+918146097261'})} >Contact Us</button>
+            <Link href="/contact"><button className="btn btn-primary"  >Contact Us</button></Link>
+            
+              {/* <button className="btn btn-primary" onClick={(()=>{location.href='https://wa.me/+918146097261'})} >Contact Us</button> */}
            
           </div>
         </div>
