@@ -15,7 +15,7 @@ import Head from "next/head"
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></link>
   </Head>
   <div className='container w-75 text-sm-center m-auto p-2 mb-3  text-center mb-3'><h2>Get in touch</h2>
-  <p className='fs-6'>We would love to hear from you! Whether you have a question, a suggestion, or simply want to say hello, we're here to listen. Our team is dedicated to providing the best possible support and assistance. So go ahead and get in touch with us using the contact information provided below.</p>
+  <p className='fs-6'>We would love to hear from you! Whether you have a question, a suggestion, or simply want to say hello, we are here to listen. Our team is dedicated to providing the best possible support and assistance. So go ahead and get in touch with us using the contact information provided below.</p>
   </div>
   
     <div className='contact-form-div bg-white container rounded-4 p-3 mb-3' style={{"    box-shadow":" 0px 4px 10px -4px #ccc"}}>
