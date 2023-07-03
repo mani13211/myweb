@@ -1,11 +1,24 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState} from "react"
 import Head from "next/head"
+import { useRouter } from "next/router"
 import Script from "next/script"
 import Slider from "react-slick"
+
 import { FiSliders } from "react-icons/fi"
 import Image from "next/image"
 import { MdOutlineDesignServices, MdMobileFriendly, MdOutlineEditNote } from "react-icons/md"
 const Home = () => {
+  // const router = useRouter();
+  // console.log(router.pathname)
+  // if(router.pathname =="/contact"){
+    
+  //   var element = document.getElementById("__next");
+  //   element.classList.add("contactpage");
+  //   console.log("conatct page")
+  // }else{
+  //   var element = document.getElementById("__next");
+  //   element.classList.remove("contactpage");
+  // }
 
   var settings = {
     dots: true,

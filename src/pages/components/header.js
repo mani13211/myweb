@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 function Header() {
+
   return (
     <div className='container'>
      <div className='p-1' style={{'font-size':"small"}}>Get latest coupnones</div>
