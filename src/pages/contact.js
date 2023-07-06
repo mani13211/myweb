@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import Head from "next/head"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const  Contact=()=> {
   const [fname, setfname] = useState("")
@@ -9,11 +11,38 @@ const  Contact=()=> {
   const [email, setemail] = useState("")
   const [type, settype] = useState("Others")
   const [message, setmessage] = useState("")
-  const handlesubmit=(e)=>{
+  const [btnState, setbtnState] = useState("Send Message")
+  const handlesubmit=async(e)=>{
     e.preventDefault() 
-    console.log(fname,lname,email,phone,message,type)
-    alert("revieved data")
+    setbtnState("Sending Message")
+   var data={fname:fname,lname:lname,email:email,phone:phone,message:message,type:type}
     
+    try {
+      const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/contact`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+      toast( result.message, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      console.log("Success:", result.message);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+    setbtnState("Send Message")
     setfname("")
     setlname("")
     setemail("")
@@ -21,7 +50,18 @@ const  Contact=()=> {
     setmessage("")
   }
   return (<div className='contact-page'>
-
+      <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            />
     <div className='contactpage-wrapper'>
       <div className='contactpage'></div>
       <img src="wave-haikei.svg" className='w-100' />
@@ -91,7 +131,11 @@ const  Contact=()=> {
                   <textarea type="text" rows={"4"} placeholder="I need some help about" name="message" required className='form-control' value={message} onChange={((e)=>{setmessage(e.target.value)})} id="message" />
                 </div>
               </div>
-              <button className='btn btn-primary mb-3 me-0 float-end ' type="Submit">Send Messsage</button>
+
+              
+              {btnState == "Send Message" && <button className='btn btn-primary mb-3 me-0 float-end ' type="Submit" >{btnState}</button>}
+              {btnState != "Send Message" && <button className='btn btn-primary mb-3 me-0 float-end ' disabled>{btnState}</button>}
+              
             </form>
           </div>
           <div className='col-md-4 form-gradien rounded-4'>
