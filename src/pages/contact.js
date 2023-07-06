@@ -18,7 +18,7 @@ const  Contact=()=> {
    var data={fname:fname,lname:lname,email:email,phone:phone,message:message,type:type}
     
     try {
-      const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/contact`, {
+      const response = await fetch( `${process.env.HOST}/api/contact`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
