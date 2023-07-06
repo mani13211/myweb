@@ -16,9 +16,10 @@ const  Contact=()=> {
     e.preventDefault() 
     setbtnState("Sending Message")
    var data={fname:fname,lname:lname,email:email,phone:phone,message:message,type:type}
+  //  console.log(process.env.NEXT_PUBLIC_HOST)
     
     try {
-      const response = await fetch( `${process.env.HOST}/api/contact`, {
+      const response = await fetch( "https://fusionwebz.com/api/contact/api/contact", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
