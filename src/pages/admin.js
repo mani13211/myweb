@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
-import connectDb from '../../middleware/middleware'
 import mongoose from 'mongoose'
 import Head from 'next/head'
 import contact from '../../models.js/contact'
@@ -16,9 +15,19 @@ function Admin({ data }) {
     } 
     setLoader(false);
   }, [])
+  const [filterText, setFilterText] = useState('');
 
  
+  const filteredData = useMemo(() => {
+    if (!filterText) return data;
+    return data.filter((row) =>
+      Object.values(row).some((value) => String(value).toLowerCase().includes(filterText.toLowerCase()))
+    );
+  }, [data, filterText]);
 
+  const handleFilter = (e) => {
+    setFilterText(e.target.value);
+  };
     const columns = [
         {
             name: 'Name',
@@ -57,20 +66,12 @@ function Admin({ data }) {
            },
     ];
 
-    const paginationComponentOptions = {
-      rowsPerPageText: 'Filas por página',
-      rangeSeparatorText: 'de',
-      selectAllRowsItem: true,
-      selectAllRowsItemText: 'Todos',
-  };
-  
-
   const deleteContact=async(id)=>{
     console.log("getting",id)
     var data={id:id,name:"mani"}
         
     try {
-      const response = await fetch( `https://fusionwebz.com/api/contactDelete`, {
+      const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/contactDelete`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -97,50 +98,22 @@ function Admin({ data }) {
       <div className='container card p-0  '>
         <nav className="navbar bg-body-tertiary">
           <div className="container-fluid">
-            <span className="navbar-brand mb-0 h1">People we need to contact</span>
+            <div className='d-flex w-100 flex-wrap justify-content-evenly align-items-center'>
+              <div> <span className="navbar-brand mb-0 h1">People we need to contact</span></div>
+              <div> <input type="text" value={filterText} onChange={handleFilter} className='form-control mt-1 mb-1 ' placeholder="Search..." /></div>
+            </div>
           </div>
         </nav>
 
-        <div className='p-3 d-none'>
-          <table id="myTable" className='w-100'>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Message</th>
-                <th>Type</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((i, key) => {
-                return (
-                  <tr key={key}>
-                    <td>{i.fname} {i.lname}</td>
-                    <td>{i.phone}</td>
-                    <td>{i.email}</td>
-                    <td>{i.message}</td>
-                    <td>{i.type}</td>
-                    <td ><button className="btn btn-primary btn-sm" onClick={(()=>{deleteContact(i._id)})} id={i._id}><i className="bi bi-trash-fill"></i></button></td>
-                  </tr>
-                )
-
-              })}
-
-
-            </tbody>
-          </table>
-          
-        </div>
+        
         <div className='p-3'>
         {loader &&  <h6 className='text-center p-3'>Loading..</h6>}
         {!loader && <DataTable
-        pagination
-        paginationRowsPerPageOptions={[5,10,15,1000]}
+          pagination
+          paginationRowsPerPageOptions={[5,10,15,1000]}
           columns={columns}
           fixedHeader={true}
-          data={data}
+          data={filteredData} 
           />}
           </div>
       
@@ -159,6 +132,7 @@ export async function getServerSideProps() {
       useNewUrlParser: "true",
       useUnifiedTopology: "true"
     })
+    // await mongoose.connect(process.env.MONGO_URI)
   }
   const data = await contact.find({})
 

@@ -19,6 +19,8 @@ const  Contact=()=> {
   //  console.log(process.env.NEXT_PUBLIC_HOST)
     
     try {
+      
+      // const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/contact`, {
       const response = await fetch( `https://fusionwebz.com/api/contact`, {
         method: "POST", // or 'PUT'
         headers: {
