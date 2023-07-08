@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import mongoose from 'mongoose'
+import { useMemo } from 'react'
 import Head from 'next/head'
 import contact from '../../models.js/contact'
 import { useRouter } from 'next/router'
