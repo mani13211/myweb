@@ -154,7 +154,11 @@ function Admin({ data }) {
 export async function getServerSideProps() {
 
   if (!mongoose.connections[0].readyState) {
-    await mongoose.connect("mongodb+srv://fusionwebz07:9815897261@cluster0.vdydlms.mongodb.net/?retryWrites=true&w=majority")
+    await mongoose.connect("mongodb+srv://fusionwebz07:9815897261@cluster0.vdydlms.mongodb.net/?retryWrites=true&w=majority",{
+      dbName: `fusionwebz`,
+      useNewUrlParser: "true",
+      useUnifiedTopology: "true"
+    })
   }
   const data = await contact.find({})
 
